@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { pokeApi } from "../redux/api/pokeapi";
+import { pokemonsGameDataSlice } from "../redux/slices/pokemonsGameData"
+import { gameDetailsSlice } from "./../redux/slices/gameDetails";
 
 export const store = configureStore({
     reducer: {
-        [pokeApi.reducerPath] : pokeApi.reducer,
+        gameDetails : gameDetailsSlice.reducer,
+        pokemonsGameData : pokemonsGameDataSlice.reducer,
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(pokeApi.middleware),
-})
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+});
