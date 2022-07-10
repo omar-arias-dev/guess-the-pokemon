@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fillPokemonData } from "../../redux/slices/pokemonsGameData/thunks";
-//import { startGame } from "./../../redux/slices/gameDetails"; TODO: Start the game when the fix is solved
 import Turn from "./components/Turn/index";
 import Loading from "./../../components/Loading/Loading";
 
@@ -13,11 +12,10 @@ export default function Game() {
 
     useEffect(() => {
         dispatch(fillPokemonData());
-        // dispatch(startGame());
     }, []);
 
     return (
-        <>
+        <div className="flex flex-col justify-evenly items-center h-screen bg-[url('https://w.wallhaven.cc/full/p8/wallhaven-p81yoe.png')] bg-cover bg-center">
             {
                 isLoading ? <Loading /> : undefined
             }
@@ -31,6 +29,6 @@ export default function Game() {
                     /> : undefined
             }
             
-        </>
+        </div>
     );
 }

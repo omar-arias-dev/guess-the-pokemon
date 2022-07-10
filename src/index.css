@@ -7,3 +7,27 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: 'Rubik', sans-serif;
+  }
+
+  button,
+  p,
+  span,
+  input,
+  div {
+    font-family: 'Comfortaa', cursive;
+  }
+
+  img {
+    pointer-events: none;
+  }
+
+  * {
+    color: white;
+  }
+}

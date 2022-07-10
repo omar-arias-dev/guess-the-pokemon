@@ -25,11 +25,8 @@ export default function SelectionButtons({ correctPokemon, incorrectPokemon1, in
 
     const handlePokemonClick = (pokemonId) => {
         if (turn === 9) {
-            console.log(turn);
             navigate("/results")
         } else {
-            console.log(turn);
-            console.log("no mandar a resultados")
         }
         if (pokemonId === correctPokemon.id) {
             if (turn <= 9) {
@@ -47,7 +44,8 @@ export default function SelectionButtons({ correctPokemon, incorrectPokemon1, in
         <section>
             {
                 positions.map((position) => (
-                    <button 
+                    <button
+                        className="bg-violet-600 hover:bg-violet-800 rounded-xl border-2 border-white p-2 mx-4 text-sm font-bold capitalize"
                         key={pokemonUnited[position].id}
                         onClick={()=>handlePokemonClick(pokemonUnited[position].id)}
                     >

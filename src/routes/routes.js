@@ -5,7 +5,7 @@ import Results from "../views/Results";
 
 export default function PokeRoutes() {
     return (
-        <div>
+        <>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -13,6 +13,6 @@ export default function PokeRoutes() {
                     <Route path="/results" element={<Results />} />
                 </Routes>
             </BrowserRouter>
-        </div>
+        </>
     );
 }

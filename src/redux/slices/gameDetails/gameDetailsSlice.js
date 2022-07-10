@@ -4,7 +4,6 @@ const initialState = {
     userName: "",
     turn: 0,
     points: 0,
-    isGameStarted: false,
 }
 
 export const gameDetailsSlice = createSlice({
@@ -26,18 +25,10 @@ export const gameDetailsSlice = createSlice({
         changeTurn: (state) => {
             state.turn += 1;
         },
-        startGame: (state) => {
-            state.isGameStarted = true;
-        },
-        stopGame: (state) => {
-            state.isGameStarted = false;
-        },
     }
 })
 
 export const {
-    startGame,
-    stopGame,
     incrementPoints,
     getPoints,
     setUserName,
