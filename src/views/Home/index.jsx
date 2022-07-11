@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Charmander from "./../../assets/images/homeImage.png";
+import Logo from "./../../assets/images/OA.png";
 
 export default function Home() {
 
@@ -20,7 +21,13 @@ export default function Home() {
                         Start game
                     </button>
                 </div>
-                <footer className="text-sm text-center">Created by Omar Arias</footer>
+                <footer className="text-sm text-center flex flex-row items-center">
+                    Created by
+                    <a className="flex flex-row items-center m-1" href="https://twitter.com/omarariasdev" rel="noreferrer" target="_blank">
+                        Omar Arias
+                        <img className="w-5  m-1" src={Logo} alt="Omar Arias"/>
+                    </a>
+                </footer>
         </div>
     );
 }
